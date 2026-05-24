@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>MindShift | Transform Your Mind — Psychology Courses by Makayla Francisco</title>
+    <meta name="description" content="Evidence-based psychology courses for personal transformation. Behavior modification, consciousness research, and sustainable change. By Makayla Francisco, Trent University.">
+    <meta name="keywords" content="psychology courses, behavior modification, consciousness, personal transformation, mental wellness, Makayla Francisco">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#fefbf6;--bg2:#fff;--bg3:#fdf6ee;--primary:#c2185b;--primary2:#ad1457;--dark:#1a1a2e;--txt:#2d2d3a;--txt2:#6b6b80;--gold:#b8860b;--gold2:#daa520;--sakura:#ffb7c5;--mint:#7dd3c0;--sky:#87ceeb;--border:#f0e6d8;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,.04)}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
+        .serif{font-family:'Playfair Display',serif}
+
+        /* Nav */
+        .nav{background:rgba(254,251,246,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+        .nav-in{max-width:1100px;margin:0 auto;padding:.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        .nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--dark)}
+        .nav-logo span{color:var(--primary)}
+        .nav-links{display:flex;gap:1.5rem;list-style:none}
+        .nav-links a{color:var(--txt2);font-size:.82rem;font-weight:500}
+        .nav-cta{padding:.5rem 1.2rem;background:var(--primary);color:#fff;font-weight:600;font-size:.8rem;border-radius:6px}
+        .nav-cta:hover{background:var(--primary2);color:#fff}
+        a{text-decoration:none;color:inherit;transition:all .2s}
+
+        /* Hero */
+        .hero{padding:6rem 1.5rem 5rem;text-align:center;background:linear-gradient(180deg,#fff5f7 0%,var(--bg) 100%);position:relative;overflow:hidden}
+        .hero::before{content:'心の転換';position:absolute;top:15%;left:50%;transform:translateX(-50%);font-size:clamp(4rem,12vw,8rem);color:rgba(255,183,197,.12);font-weight:700;pointer-events:none;white-space:nowrap}
+        .hero-badge{display:inline-block;padding:.3rem 1rem;background:rgba(194,24,91,.08);border:1px solid rgba(194,24,91,.15);border-radius:20px;font-size:.7rem;color:var(--primary);font-weight:600;margin-bottom:1.5rem;letter-spacing:.03em}
+        .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;color:var(--dark);line-height:1.15;margin-bottom:1rem}
+        .hero h1 em{font-style:normal;color:var(--primary)}
+        .hero-sub{font-size:1.05rem;color:var(--txt2);max-width:550px;margin:0 auto 2.5rem}
+        .hero-cta{display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+        .btn-p{padding:.8rem 2.2rem;background:var(--primary);color:#fff;font-weight:600;border-radius:8px;font-size:.9rem;transition:all .2s;display:inline-block}
+        .btn-p:hover{background:var(--primary2);color:#fff;transform:translateY(-2px);box-shadow:0 6px 20px rgba(194,24,91,.25)}
+        .btn-s{padding:.8rem 2.2rem;background:var(--bg2);color:var(--txt);font-weight:600;border-radius:8px;font-size:.9rem;border:1px solid var(--border);display:inline-block}
+        .btn-s:hover{border-color:var(--primary);color:var(--primary)}
+
+        /* Social Proof */
+        .proof{display:flex;justify-content:center;gap:3rem;padding:2.5rem 1.5rem;flex-wrap:wrap}
+        .proof-item{text-align:center}
+        .proof-item b{display:block;font-size:1.6rem;color:var(--dark);font-weight:800}
+        .proof-item span{font-size:.7rem;color:var(--txt2);text-transform:uppercase;letter-spacing:.05em}
+
+        /* Section */
+        .section{padding:5rem 1.5rem;max-width:1100px;margin:0 auto}
+        .section-lbl{font-size:.7rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+        .section h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:var(--dark);margin-bottom:.5rem}
+        .section .desc{color:var(--txt2);max-width:500px;margin-bottom:2.5rem;font-size:.92rem}
+
+        /* Course Cards */
+        .course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+        .course-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:all .2s;position:relative;overflow:hidden}
+        .course-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.06)}
+        .course-card.featured{border:2px solid var(--gold2)}
+        .course-card.featured::after{content:'BESTSELLER';position:absolute;top:12px;right:-28px;background:var(--gold2);color:#fff;font-size:.55rem;font-weight:700;padding:.2rem 2rem;transform:rotate(45deg)}
+        .course-tag{font-size:.65rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem}
+        .course-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--dark);margin-bottom:.4rem}
+        .course-card p{font-size:.82rem;color:var(--txt2);margin-bottom:1rem}
+        .course-meta{display:flex;gap:1rem;font-size:.7rem;color:var(--txt2);margin-bottom:1.2rem}
+        .course-price{font-size:1.4rem;font-weight:800;color:var(--dark)}
+        .course-price small{font-size:.75rem;color:var(--txt2);font-weight:400}
+        .course-btn{display:block;width:100%;padding:.65rem;background:var(--primary);color:#fff;border:none;border-radius:6px;font-weight:600;font-size:.82rem;cursor:pointer;text-align:center;transition:all .2s}
+        .course-btn:hover{background:var(--primary2);color:#fff}
+
+        /* Testimonials */
+        .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+        .test-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}
+        .test-card p{font-size:.85rem;color:var(--txt);font-style:italic;margin-bottom:1rem}
+        .test-author{font-size:.75rem;color:var(--txt2);font-weight:600}
+        .stars{color:var(--gold2);margin-bottom:.5rem;font-size:.9rem}
+
+        /* Founder */
+        .founder{background:var(--bg3);border-radius:var(--radius);padding:3rem;margin:4rem auto;max-width:700px;text-align:center}
+        .founder h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--dark);margin-bottom:.5rem}
+        .founder p{font-size:.88rem;color:var(--txt2);margin-bottom:.5rem}
+        .founder .creds{font-size:.75rem;color:var(--primary);font-weight:600}
+
+        /* CTA */
+        .cta-section{text-align:center;padding:5rem 1.5rem;background:linear-gradient(180deg,var(--bg) 0%,#fff5f7 100%)}
+        .cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--dark);margin-bottom:.5rem}
+        .cta-section p{color:var(--txt2);margin-bottom:2rem;max-width:450px;margin-left:auto;margin-right:auto}
+
+        /* Footer */
+        .footer{background:var(--dark);padding:2.5rem 1.5rem}
+        .footer-in{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+        .footer p{font-size:.75rem;color:#94a3b8}
+        .footer a{color:#94a3b8;font-size:.75rem;margin-left:1.5rem}
+        .footer a:hover{color:#fff}
+        .disclaimer{text-align:center;padding:1rem 1.5rem;background:#1a1a2e;border-top:1px solid #334155}
+        .disclaimer p{font-size:.65rem;color:#64748b;max-width:800px;margin:0 auto}
+
+        @media(max-width:768px){
+            .nav-links{display:none}
+            .hero h1{font-size:1.8rem}
+            .proof{gap:1.5rem}
+            .course-grid,.test-grid{grid-template-columns:1fr}
+            .footer-in{flex-direction:column;text-align:center}
+            .footer a{margin:0 .5rem}
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="nav"><div class="nav-in">
+        <a href="#" class="nav-logo">Mind<span>~</span>Shift</a>
+        <ul class="nav-links">
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <a href="#courses" class="nav-cta">Enroll Now</a>
+    </div></nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-badge">KOKORO NO TENKAN — 心の転換 — Transformation of the Heart</div>
+        <h1 class="serif">Where Understanding<br>Begins a <em>Shift</em></h1>
+        <p class="hero-sub">Evidence-based psychology courses for lasting personal transformation. Behavior modification, consciousness research, and sustainable change.</p>
+        <div class="hero-cta">
+            <a href="#courses" class="btn-p">View Courses</a>
+            <a href="#about" class="btn-s">Meet Makayla</a>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <div class="proof">
+        <div class="proof-item"><b>247</b><span>Students Enrolled</span></div>
+        <div class="proof-item"><b>4.9★</b><span>Average Rating</span></div>
+        <div class="proof-item"><b>5</b><span>Programs</span></div>
+        <div class="proof-item"><b>92%</b><span>Completion Rate</span></div>
+    </div>
+
+    <!-- Courses -->
+    <section class="section" id="courses">
+        <div class="section-lbl">TRANSFORMATIVE PROGRAMS</div>
+        <h2>Choose Your Path</h2>
+        <p class="desc">Each program is designed for lasting behavioral change, not quick fixes.</p>
+        <div class="course-grid">
+            <div class="course-card">
+                <div class="course-tag">Self-Paced</div>
+                <h3>Foundations of Change</h3>
+                <p>Understanding the psychology of habits, triggers, and sustainable behavior modification. Perfect starting point.</p>
+                <div class="course-meta"><span>6 Modules</span><span>12 Hours</span><span>Workbook Included</span></div>
+                <div class="course-price">$29<small> CAD</small></div>
+                <button class="course-btn" onclick="alert('Enrollment opening soon. Email makayla@mindshift.ca to join waitlist.')">Join Waitlist</button>
+            </div>
+            <div class="course-card featured">
+                <div class="course-tag">Most Popular</div>
+                <h3>Deep Transformation</h3>
+                <p>8-week intensive combining CBT, mindfulness, and consciousness research. Weekly live sessions with Makayla.</p>
+                <div class="course-meta"><span>8 Weeks</span><span>24 Hours</span><span>Live Sessions</span></div>
+                <div class="course-price">$149<small> CAD</small></div>
+                <button class="course-btn" onclick="alert('Enrollment opening soon. Email makayla@mindshift.ca to join waitlist.')">Join Waitlist</button>
+            </div>
+            <div class="course-card">
+                <div class="course-tag">1-on-1</div>
+                <h3>Private Coaching</h3>
+                <p>Personalized transformation plan with bi-weekly 1-on-1 sessions. Tailored to your specific goals and challenges.</p>
+                <div class="course-meta"><span>12 Weeks</span><span>Custom</span><span>Private Sessions</span></div>
+                <div class="course-price">$49<small> CAD/session</small></div>
+                <button class="course-btn" onclick="alert('Enrollment opening soon. Email makayla@mindshift.ca to join waitlist.')">Join Waitlist</button>
+            </div>
+            <div class="course-card">
+                <div class="course-tag">Bundle</div>
+                <h3>Complete MindShift Bundle</h3>
+                <p>All courses + private coaching + lifetime community access. The full transformation package at 40% savings.</p>
+                <div class="course-meta"><span>All Access</span><span>Lifetime</span><span>Community</span></div>
+                <div class="course-price">$199<small> CAD</small></div>
+                <button class="course-btn" onclick="alert('Enrollment opening soon. Email makayla@mindshift.ca to join waitlist.')">Join Waitlist</button>
+            </div>
+            <div class="course-card">
+                <div class="course-tag">Corporate</div>
+                <h3>Workplace Wellness</h3>
+                <p>Team-based program for organizations. Stress management, communication, and performance psychology for teams of 5-50.</p>
+                <div class="course-meta"><span>6 Weeks</span><span>Team-Based</span><span>HR Reports</span></div>
+                <div class="course-price">$79<small> CAD/person</small></div>
+                <button class="course-btn" onclick="alert('Contact makayla@mindshift.ca for corporate pricing.')">Contact Sales</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="results">
+        <div class="section-lbl">STUDENT RESULTS</div>
+        <h2>Real Transformations</h2>
+        <p class="desc">What students say about their MindShift experience.</p>
+        <div class="test-grid">
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p>"The Deep Transformation program completely changed how I approach my anxiety. Makayla's blend of science and compassion is unmatched."</p>
+                <div class="test-author">— Sarah M., Peterborough</div>
+            </div>
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p>"I've tried therapy, apps, books — nothing stuck until MindShift. The behavior modification framework actually works because it's built on real psychology."</p>
+                <div class="test-author">— James K., Toronto</div>
+            </div>
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p>"The corporate wellness program transformed our team dynamics. Measurable improvement in communication and stress levels within 4 weeks."</p>
+                <div class="test-author">— Lisa T., HR Director</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder -->
+    <section id="about">
+        <div class="founder">
+            <h3 class="serif">Meet Makayla Francisco</h3>
+            <p>Psychology graduate from Trent University (Class of 2026), specializing in behavior modification and consciousness research. MindShift combines evidence-based psychology with practical transformation frameworks.</p>
+            <div class="creds">BSc Psychology, Trent University | Consciousness Research | Behavior Modification</div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2 class="serif">Ready to Begin Your Shift?</h2>
+        <p>Join 247 students who've already started their transformation journey.</p>
+        <a href="#courses" class="btn-p">View Courses</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-in">
+            <p>A gift from Derek Francisco. Built with love for Makayla's graduation. &copy; 2026 MindShift.</p>
+            <div>
+                <a href="https://franciscoderek7.github.io/mindshift-makayla/privacy.html">Privacy</a>
+                <a href="https://franciscoderek7.github.io/mindshift-makayla/terms.html">Terms</a>
+                <a href="mailto:makayla@mindshift.ca">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <div class="disclaimer">
+        <p>EDUCATIONAL SERVICES ONLY. MindShift provides educational content and is not licensed therapy. If you are experiencing a mental health crisis, please contact Crisis Services Canada: 1-833-456-4566. A Francisco Holdings Inc. Company.</p>
+    </div>
+</body>
+</html>
