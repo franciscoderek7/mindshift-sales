@@ -223,6 +223,20 @@
         <a href="#courses" class="btn-p">View Courses</a>
     </section>
 
+    <!-- Email Capture / Waitlist -->
+    <section class="section" style="text-align:center;padding:3rem 1.5rem">
+        <div style="max-width:500px;margin:0 auto">
+            <div style="font-size:.7rem;font-weight:700;color:#e11d48;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.5rem">FREE RESOURCE</div>
+            <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.5vw,1.8rem);color:#1a1a2e;margin-bottom:.5rem">Get the MindShift Starter Guide</h2>
+            <p style="color:#64748b;font-size:.85rem;margin-bottom:1.5rem">A free 12-page PDF: "5 Evidence-Based Techniques for Lasting Behavioral Change." Join 247 students already on the path.</p>
+            <form id="ms-form" style="display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center" onsubmit="event.preventDefault();var e=document.getElementById('ms-email').value;if(e&&e.includes('@')){document.getElementById('ms-form').innerHTML='<p style=color:#e11d48;font-weight:600>\u2713 Check your inbox. Your shift begins now.</p>';localStorage.setItem('mindshift_lead',e)}else{alert('Please enter a valid email.')}">
+                <input id="ms-email" type="email" placeholder="your@email.com" required style="flex:1;min-width:220px;padding:.7rem 1rem;border:1px solid #e2e8f0;border-radius:6px;font-size:.9rem;outline:none" onfocus="this.style.borderColor='#e11d48'" onblur="this.style.borderColor='#e2e8f0'">
+                <button type="submit" style="padding:.7rem 1.5rem;background:#e11d48;color:#fff;border:none;border-radius:6px;font-weight:600;font-size:.85rem;cursor:pointer;transition:background .2s" onmouseover="this.style.background='#be123c'" onmouseout="this.style.background='#e11d48'">Send My Guide →</button>
+            </form>
+            <p style="font-size:.65rem;color:#94a3b8;margin-top:.8rem">No spam. Unsubscribe anytime. Educational content only.</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-in">
