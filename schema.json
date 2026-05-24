@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MindShift Sales",
+  "description": "MindShift \u2014 AI-powered wellness coaching platform. Mental health support, corporate wellness programs, and personalized coaching.",
+  "url": "https://franciscoderek7.github.io/mindshift-sales",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "99",
+    "highPrice": "2499"
+  }
+}
